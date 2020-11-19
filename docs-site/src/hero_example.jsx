@@ -22,6 +22,8 @@ export default class HeroExample extends React.Component {
     return (
       <DatePicker
         autoFocus
+        showMonthDropdown
+        showYearDropdown
         selected={this.state.startDate}
         onChange={this.handleChange}
         calendar="hijri"

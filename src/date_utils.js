@@ -107,11 +107,18 @@ export function setTime(date, { hour, minute, second }) {
   return date;
 }
 
-export function setMonth(date, month) {
+export function setMonth(date, month, calendar = "") {
+  if (calendar === "hijri") {
+    return date.iMonth(month);
+  }
   return set(date, "month", month);
 }
 
-export function setYear(date, year) {
+export function setYear(date, year, calendar = "") {
+  if (calendar === "hijri") {
+    return date.iYear(year);
+  }
+
   return set(date, "year", year);
 }
 

@@ -1,5 +1,5 @@
 import config from "./rollup.config.js";
-import uglify from "rollup-plugin-uglify";
+import { uglify } from "rollup-plugin-uglify";
 
 const env = process.env.NODE_ENV;
 
@@ -24,8 +24,7 @@ if (env === "production") {
       compress: {
         pure_getters: true,
         unsafe: true,
-        unsafe_comps: true,
-        warnings: false
+        unsafe_comps: true
       }
     })
   );

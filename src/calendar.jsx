@@ -247,7 +247,7 @@ export default class Calendar extends React.Component {
   changeYear = year => {
     this.setState(
       {
-        date: setYear(cloneDate(this.state.date), year)
+        date: setYear(cloneDate(this.state.date), year, this.props.calendar)
       },
       () => this.handleYearChange(this.state.date)
     );
@@ -256,7 +256,7 @@ export default class Calendar extends React.Component {
   changeMonth = month => {
     this.setState(
       {
-        date: setMonth(cloneDate(this.state.date), month)
+        date: setMonth(cloneDate(this.state.date), month, this.props.calendar)
       },
       () => this.handleMonthChange(this.state.date)
     );
@@ -266,8 +266,13 @@ export default class Calendar extends React.Component {
     this.setState(
       {
         date: setYear(
-          setMonth(cloneDate(this.state.date), getMonth(monthYear)),
-          getYear(monthYear)
+          setMonth(
+            cloneDate(this.state.date),
+            getMonth(monthYear),
+            this.props.calendar
+          ),
+          getYear(monthYear),
+          this.props.calendar
         )
       },
       () => this.handleMonthYearChange(this.state.date)
@@ -508,9 +513,7 @@ export default class Calendar extends React.Component {
           <div className="react-datepicker__header">
             {this.renderCurrentMonth(monthDate)}
             <div
-              className={`react-datepicker__header__dropdown react-datepicker__header__dropdown--${
-                this.props.dropdownMode
-              }`}
+              className={`react-datepicker__header__dropdown react-datepicker__header__dropdown--${this.props.dropdownMode}`}
               onFocus={this.handleDropdownFocus}
             >
               {this.renderMonthDropdown(i !== 0)}
