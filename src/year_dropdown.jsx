@@ -72,7 +72,6 @@ export default class YearDropdown extends React.Component {
   renderDropdown = () => (
     <WrappedYearDropdownOptions
       key="dropdown"
-      ref="options"
       year={this.props.year}
       onChange={this.onChange}
       onCancel={this.toggleDropdown}
@@ -141,9 +140,7 @@ export default class YearDropdown extends React.Component {
 
     return (
       <div
-        className={`react-datepicker__year-dropdown-container react-datepicker__year-dropdown-container--${
-          this.props.dropdownMode
-        }`}
+        className={`react-datepicker__year-dropdown-container react-datepicker__year-dropdown-container--${this.props.dropdownMode}`}
       >
         {renderedDropdown}
       </div>
