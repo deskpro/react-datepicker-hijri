@@ -1,12 +1,12 @@
 # React Date Picker
 
-[![npm version](https://badge.fury.io/js/@deskpro/react-datepicker-hijri.svg)](https://badge.fury.io/js/@deskpro/react-datepicker-hijri)
-[![Build Status](https://travis-ci.org/deskpro/react-datepicker-hijri.svg?branch=master)](https://travis-ci.org/deskpro/react-datepicker-hijri)
-[![Dependency Status](https://david-dm.org/deskpro/react-datepicker-hijri.svg)](https://david-dm.org/deskpro/react-datepicker-hijri)
-[![codecov](https://codecov.io/gh/deskpro/react-datepicker-hijri/branch/master/graph/badge.svg)](https://codecov.io/gh/deskpro/react-datepicker-hijri)
-[![Downloads](http://img.shields.io/npm/dm/@deskpro/react-datepicker-hijri.svg)](https://npmjs.org/package/@deskpro/react-datepicker-hijri)
+[![npm version](https://badge.fury.io/js/@smartphonedesign/react-datepicker-hijri.svg)](https://badge.fury.io/js/@deskpro/react-datepicker-hijri)
+[![Build Status](https://travis-ci.org/smartphonedesign/react-datepicker-hijri.svg?branch=master)](https://travis-ci.org/deskpro/react-datepicker-hijri)
+[![Dependency Status](https://david-dm.org/smartphonedesign/react-datepicker-hijri.svg)](https://david-dm.org/deskpro/react-datepicker-hijri)
+[![codecov](https://codecov.io/gh/smartphonedesign/react-datepicker-hijri/branch/master/graph/badge.svg)](https://codecov.io/gh/deskpro/react-datepicker-hijri)
+[![Downloads](http://img.shields.io/npm/dm/@smartphonedesign/react-datepicker-hijri.svg)](https://npmjs.org/package/@deskpro/react-datepicker-hijri)
 
-A simple and reusable Datepicker component for React ([Demo](https://deskpro.github.io/react-datepicker-hijri/))
+A simple and reusable Datepicker component for React ([Demo](https://smartphonedesign.github.io/react-datepicker-hijri/))
 
 ![](https://cloud.githubusercontent.com/assets/1412392/5339491/c40de124-7ee1-11e4-9f07-9276e2545f27.png)
 
@@ -15,20 +15,20 @@ A simple and reusable Datepicker component for React ([Demo](https://deskpro.git
 The package can be installed via NPM:
 
 ```
-npm install @deskpro/react-datepicker-hijri --save
+npm install @smartphonedesign/react-datepicker-hijri --save
 ```
 
 You’ll need to install `react`, `propTypes`, `moment` and `moment-hijri` separately since those dependencies aren’t included in the package. Below is a simple example of how to use the Datepicker in a React view. You will also need to require the CSS file from this package (or provide your own). The example below shows how to include the CSS from this package if your build system supports requiring CSS files (Webpack is one that does).
 
 ```js
 import React from "react";
-import DatePicker from "@deskpro/react-datepicker-hijri";
+import DatePicker from "@smartphonedesign/react-datepicker-hijri";
 import moment from "moment-hijri";
 
-import "@deskpro/react-datepicker-hijri/dist/react-datepicker.css";
+import "@smartphonedesign/react-datepicker-hijri/dist/react-datepicker.css";
 
 // CSS Modules, react-datepicker-cssmodules.css
-// import '@deskpro/react-datepicker-hijri/dist/react-datepicker-cssmodules.css';
+// import '@smartphonedesign/react-datepicker-hijri/dist/react-datepicker-cssmodules.css';
 
 class Example extends React.Component {
   constructor(props) {
@@ -68,7 +68,8 @@ The most basic use of the DatePicker can be described with:
 You can use `onSelect` event handler which fires each time some calendar date has been selected
 
 ```js
-<DatePicker selected={this.state.date}
+<DatePicker
+  selected={this.state.date}
   onSelect={this.handleSelect} //when day is clicked
   onChange={this.handleChange} //only when value has changed
 />
@@ -76,7 +77,7 @@ You can use `onSelect` event handler which fires each time some calendar date ha
 
 `onClickOutside` handler may be useful to close datepicker in `inline` mode
 
-See [here](https://github.com/deskpro/react-datepicker-hijri/blob/master/docs/datepicker.md) for a full list of props that may be passed to the component. Examples are given on the [main website](https://hacker0x01.github.io/react-datepicker).
+See [here](https://github.com/smartphonedesign/react-datepicker-hijri/blob/master/docs/datepicker.md) for a full list of props that may be passed to the component. Examples are given on the [main website](https://hacker0x01.github.io/react-datepicker).
 
 ### Time picker
 
@@ -99,8 +100,8 @@ More examples of how to use the time picker are given on the [main website](http
 
 The date picker relies on [moment.js internationalization](http://momentjs.com/docs/#/i18n/) to localize its display components. By default, the date picker will use the locale globally set in moment, which is English. Locales can be changed in the following ways:
 
-* **Globally** by calling `moment.locale(lang)`
-* **Picker-specific** by providing the `locale` prop
+- **Globally** by calling `moment.locale(lang)`
+- **Picker-specific** by providing the `locale` prop
 
 Locales can be further configured in moment with various [customization options](http://momentjs.com/docs/#/customization/).
 
@@ -114,11 +115,11 @@ We're always trying to stay compatible with the latest version of React. We can'
 
 Latest compatible versions:
 
-* React 15.5 or newer: All above React-datepicker v.0.40.0
-* React 15.4.1: needs React-datepicker v0.40.0, newer won't work (due to react-onclickoutside dependencies)
-* React 0.14 or newer: All above React-datepicker v0.13.0
-* React 0.13: React-datepicker v0.13.0
-* pre React 0.13: React-datepicker v0.6.2
+- React 15.5 or newer: All above React-datepicker v.0.40.0
+- React 15.4.1: needs React-datepicker v0.40.0, newer won't work (due to react-onclickoutside dependencies)
+- React 0.14 or newer: All above React-datepicker v0.13.0
+- React 0.13: React-datepicker v0.13.0
+- pre React 0.13: React-datepicker v0.6.2
 
 ### Browser Support
 
@@ -140,15 +141,15 @@ The examples are hosted within the docs folder and are ran in the simple app tha
 
 ### Keyboard support
 
-* _Left_: Move to the previous day.
-* _Right_: Move to the next day.
-* _Up_: Move to the previous week.
-* _Down_: Move to the next week.
-* _PgUp_: Move to the previous month.
-* _PgDn_: Move to the next month.
-* _Home_: Move to the previous year.
-* _End_: Move to the next year.
-* _Enter/Esc/Tab_: close the calendar. (Enter & Esc calls preventDefault)
+- _Left_: Move to the previous day.
+- _Right_: Move to the next day.
+- _Up_: Move to the previous week.
+- _Down_: Move to the next week.
+- _PgUp_: Move to the previous month.
+- _PgDn_: Move to the next month.
+- _Home_: Move to the previous year.
+- _End_: Move to the next year.
+- _Enter/Esc/Tab_: close the calendar. (Enter & Esc calls preventDefault)
 
 ## License
 
