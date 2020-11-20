@@ -1,10 +1,13 @@
 {
-  "author": "Deskpro",
+  "author": "smartphonedesign",
   "name": "@smartphonedesign/react-datepicker-hijri",
   "description": "A simple and reusable datepicker component for React",
-  "version": "1.5.1",
+  "version": "1.5.2",
   "license": "MIT",
   "homepage": "https://github.com/smartphonedesign/react-datepicker-hijri",
+  "publishConfig": {
+    "registry": "https://npm.pkg.github.com/"
+  },
   "main": "lib",
   "module": "es",
   "unpkg": "dist/react-datepicker.min.js",
@@ -138,5 +141,11 @@
       "prettier --write",
       "git add"
     ]
+  },
+  "directories": {
+    "doc": "docs",
+    "example": "examples",
+    "lib": "lib",
+    "test": "test"
   }
 }
